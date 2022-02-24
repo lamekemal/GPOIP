@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31829.152
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GPOIP", "GPOIP\GPOIP.csproj", "{ABA72EA9-97D6-4CF2-A3FF-8BECEC4BB0E1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ABA72EA9-97D6-4CF2-A3FF-8BECEC4BB0E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABA72EA9-97D6-4CF2-A3FF-8BECEC4BB0E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABA72EA9-97D6-4CF2-A3FF-8BECEC4BB0E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABA72EA9-97D6-4CF2-A3FF-8BECEC4BB0E1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DB03F3C3-117E-4EF2-BAB2-C573B4094A74}
+	EndGlobalSection
+EndGlobal
