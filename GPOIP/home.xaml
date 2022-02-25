@@ -8,11 +8,11 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="home" Background="White">
     <Grid>
-        <Grid x:Name="HomeGrid">
+        <Grid x:Name="HomeGrid" Visibility="Visible">
             <Grid.Background>
                 <ImageBrush ImageSource="/Assets/femme.jpg" Stretch="UniformToFill"/>
             </Grid.Background>
-            <Button Content="Modifier programme " Margin="0,56,40,0" VerticalAlignment="Top" Height="49" HorizontalAlignment="Right" Width="164" FontWeight="Bold">
+            <Button x:Name="modButtonx" Content="Modifier programme " Margin="0,56,40,0" VerticalAlignment="Top" Height="49" HorizontalAlignment="Right" Width="164" FontWeight="Bold" Click="modButtonx_Click">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="10"/>
@@ -40,14 +40,14 @@
                     </Style>
                 </Button.Resources>
             </Button>
-            <Button x:Name="progconBut" Content="Programmer cours" Margin="42,184,0,0" VerticalAlignment="Top" Height="49" HorizontalAlignment="Left" Width="164" FontWeight="Bold">
+            <Button x:Name="progconBut" Content="Programmer cours" Margin="42,184,0,0" VerticalAlignment="Top" Height="49" HorizontalAlignment="Left" Width="164" FontWeight="Bold" Click="progconBut_Click">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="10"/>
                     </Style>
                 </Button.Resources>
             </Button>
-            <Button Content="Suivre la programmation" Margin="42,327,0,0" VerticalAlignment="Top" Height="49" HorizontalAlignment="Left" Width="164" FontWeight="Bold">
+            <Button x:Name="suiviButt" Content="Suivre la programmation" Margin="42,327,0,0" VerticalAlignment="Top" Height="49" HorizontalAlignment="Left" Width="164" FontWeight="Bold" Click="suiviButt_Click">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="10"/>
@@ -56,6 +56,9 @@
             </Button>
         </Grid>
         <Grid x:Name="AddForm" Visibility="Hidden">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
             <Grid.Background>
                 <ImageBrush ImageSource="/Assets/etu.jpg" Stretch="UniformToFill"/>
             </Grid.Background>
@@ -66,7 +69,7 @@
                     </Style>
                 </Button.Resources>
             </Button>
-            <Button Content="Annuler" Margin="0,395,178,0" VerticalAlignment="Top" Height="31" HorizontalAlignment="Right" Width="137" FontWeight="Bold" Background="#FFC50C0C" BorderBrush="#FFD64400" Foreground="White">
+            <Button x:Name="anulajFormbut" Content="Annuler" Margin="0,395,178,0" VerticalAlignment="Top" Height="31" HorizontalAlignment="Right" Width="137" FontWeight="Bold" Background="#FFC50C0C" BorderBrush="#FFD64400" Foreground="White" Click="anulajFormbut_Click">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="10"/>
@@ -79,10 +82,10 @@
                 </Rectangle.Effect>
             </Rectangle>
             <TextBlock HorizontalAlignment="Left" Margin="10,59,0,0" Text="Formulaire d'ajout" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="42" FontWeight="Bold" FontFamily="Franklin Gothic Book"/>
-            <TextBox HorizontalAlignment="Left" Margin="524,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194" Height="36" AutomationProperties.HelpText="Année Académique" Text="Année Académique" FontSize="15" BorderBrush="White"/>
-            <TextBox HorizontalAlignment="Left" Margin="524,159,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194" Height="36" AutomationProperties.HelpText="Faculté/Ecole" Text="Faculté/Ecole" FontSize="15" BorderBrush="White"/>
-            <TextBox HorizontalAlignment="Left" Margin="524,232,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194" Height="36" AutomationProperties.HelpText="Amphi/Salle " Text="Amphi/Salle " FontSize="15" BorderBrush="White"/>
-            <TextBox HorizontalAlignment="Left" Margin="524,308,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194" Height="36" AutomationProperties.HelpText="Equipements " Text="Equipements " FontSize="15" BorderBrush="White"/>
+            <TextBox Margin="0,79,82,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="36" AutomationProperties.HelpText="Année Académique" Text="Année Académique" FontSize="15" BorderBrush="White" HorizontalAlignment="Right" Width="194"/>
+            <TextBox Margin="0,159,82,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="36" AutomationProperties.HelpText="Faculté/Ecole" Text="Faculté/Ecole" FontSize="15" BorderBrush="White" HorizontalAlignment="Right" Width="194"/>
+            <TextBox Margin="0,232,82,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="36" AutomationProperties.HelpText="Amphi/Salle " Text="Amphi/Salle " FontSize="15" BorderBrush="White" HorizontalAlignment="Right" Width="194"/>
+            <TextBox Margin="0,308,82,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="36" AutomationProperties.HelpText="Equipements " Text="Equipements " FontSize="15" BorderBrush="White" HorizontalAlignment="Right" Width="194"/>
         </Grid>
         <Grid x:Name="programationCours" Visibility="Hidden">
             <Grid.Background>
@@ -108,7 +111,7 @@
             <TextBox HorizontalAlignment="Left" Margin="123,318,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" Height="29" FontSize="15"/>
             <Label Content="Groupe" HorizontalAlignment="Left" Margin="32,315,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="15" Height="32" Width="70"/>
             <TextBox HorizontalAlignment="Left" Margin="235,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="56" Height="30" FontSize="15" InputScope="Number"/>
-            <Button x:Name="progBack" Content="Retour" Margin="63,372,0,0" VerticalAlignment="Top" Height="27" FontWeight="Bold" HorizontalAlignment="Left" Width="82" Click="addButton_Click">
+            <Button x:Name="progBack" Content="Retour" Margin="63,372,0,0" VerticalAlignment="Top" Height="27" FontWeight="Bold" HorizontalAlignment="Left" Width="82" Click="progBack_Click">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="10"/>
@@ -149,7 +152,7 @@
                     </Style>
                 </Button.Resources>
             </Button>
-            <Button x:Name="suiviExe_Copy" Content="Retour" Margin="152,406,0,0" VerticalAlignment="Top" Height="27" FontWeight="Bold" HorizontalAlignment="Left" Width="88" Click="addButton_Click" RenderTransformOrigin="0.494,0.543" BorderBrush="#FF282D4B" Background="#FF282D4B" Foreground="White">
+            <Button x:Name="suiviExe_Copy" Content="Retour" Margin="152,406,0,0" VerticalAlignment="Top" Height="27" FontWeight="Bold" HorizontalAlignment="Left" Width="88" RenderTransformOrigin="0.494,0.543" BorderBrush="#FF282D4B" Background="#FF282D4B" Foreground="White" Click="suiviExe_Copy_Click">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="10"/>
@@ -188,7 +191,7 @@
             <TextBox HorizontalAlignment="Left" Margin="123,318,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" Height="29" FontSize="15"/>
             <Label Content="Groupe" HorizontalAlignment="Left" Margin="32,315,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="15" Height="32" Width="70" Foreground="White"/>
             <TextBox HorizontalAlignment="Left" Margin="235,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="56" Height="30" FontSize="15" InputScope="Number"/>
-            <Button x:Name="mprogBack" Content="Retour" Margin="63,372,0,0" VerticalAlignment="Top" Height="27" FontWeight="Bold" HorizontalAlignment="Left" Width="82" >
+            <Button x:Name="mprogBack" Content="Retour" Margin="63,372,0,0" VerticalAlignment="Top" Height="27" FontWeight="Bold" HorizontalAlignment="Left" Width="82" Click="mprogBack_Click" >
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="10"/>

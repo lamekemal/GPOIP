@@ -28,5 +28,48 @@ namespace GPOIP
             HomeGrid.Visibility = Visibility.Hidden;
             AddForm.Visibility = Visibility.Visible;
         }
+
+        private void progconBut_Click(object sender, RoutedEventArgs e)
+        {
+            HomeGrid.Visibility = Visibility.Hidden;
+            programationCours.Visibility = Visibility.Visible;
+        }
+
+        private void suiviButt_Click(object sender, RoutedEventArgs e)
+        {
+            HomeGrid.Visibility = Visibility.Hidden;
+            suiviProg.Visibility = Visibility.Visible;
+        }
+
+        private void modButtonx_Click(object sender, RoutedEventArgs e)
+        {
+            HomeGrid.Visibility = Visibility.Hidden;
+            editProg.Visibility = Visibility.Visible;
+        }
+
+        private void anulajFormbut_Click(object sender, RoutedEventArgs e)
+        {
+            AddForm.Visibility = Visibility.Hidden;
+            HomeGrid.Visibility = Visibility.Visible;
+
+        }
+
+        private void progBack_Click(object sender, RoutedEventArgs e)
+        {
+            HomeGrid.Visibility = Visibility.Visible;
+            programationCours.Visibility = Visibility.Hidden;
+        }
+
+        private void suiviExe_Copy_Click(object sender, RoutedEventArgs e)
+        {
+                HomeGrid.Visibility = Visibility.Visible;
+                suiviProg.Visibility = Visibility.Hidden;
+        }
+
+        private void mprogBack_Click(object sender, RoutedEventArgs e)
+        {
+            HomeGrid.Visibility = Visibility.Visible;
+            editProg.Visibility = Visibility.Hidden;
+        }
     }
 }
