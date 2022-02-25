@@ -40,7 +40,7 @@
                     </Style>
                 </Button.Resources>
             </Button>
-            <Button Content="Programmer cours" Margin="42,184,0,0" VerticalAlignment="Top" Height="49" HorizontalAlignment="Left" Width="164" FontWeight="Bold">
+            <Button x:Name="progconBut" Content="Programmer cours" Margin="42,184,0,0" VerticalAlignment="Top" Height="49" HorizontalAlignment="Left" Width="164" FontWeight="Bold">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="10"/>
@@ -163,6 +163,46 @@
                     </Style>
                 </Button.Resources>
             </Button>
+        </Grid>
+        <Grid x:Name="editProg" Visibility="Hidden">
+            <Grid.Background>
+                <ImageBrush ImageSource="/Assets/livre.jpg" Stretch="UniformToFill"/>
+            </Grid.Background>
+            <Rectangle HorizontalAlignment="Left" Height="70" Margin="-13,32,0,0" VerticalAlignment="Top" Width="401" Opacity="0.7" RadiusX="7" RadiusY="7" Fill="White">
+                <Rectangle.Effect>
+                    <BlurEffect/>
+                </Rectangle.Effect>
+            </Rectangle>
+            <TextBlock HorizontalAlignment="Left" Margin="10,52,0,0" Text="Modifier la programmation" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="32" FontWeight="Bold" FontFamily="Franklin Gothic Book"/>
+            <TextBlock HorizontalAlignment="Left" Height="307" Margin="423,104,0,0" Text="Recapitulatif" TextWrapping="Wrap" VerticalAlignment="Top" Width="340" Background="White"/>
+            <TextBox HorizontalAlignment="Left" Margin="123,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" Height="29" FontSize="15" InputScope="Number"/>
+            <Label Content="Année" HorizontalAlignment="Left" Margin="32,126,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="15" Height="32" Width="62" Foreground="White"/>
+            <TextBox HorizontalAlignment="Left" Margin="123,167,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" Height="29" FontSize="15" InputScope="Date"/>
+            <Label Content="Date" HorizontalAlignment="Left" Margin="32,164,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="15" Height="32" Width="49" Foreground="White"/>
+            <TextBox HorizontalAlignment="Left" Margin="124,205,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="56" Height="29" FontSize="15" InputScope="Number"/>
+            <Label Content="Heure" HorizontalAlignment="Left" Margin="33,0,0,0" VerticalAlignment="Center" FontWeight="Bold" FontSize="15" Height="33" Width="60" Foreground="White"/>
+            <TextBox HorizontalAlignment="Left" Margin="123,242,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" Height="30" FontSize="15"/>
+            <Label Content="Amphi" HorizontalAlignment="Left" Margin="32,239,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="15" Height="32" Width="64" Foreground="White"/>
+            <TextBox HorizontalAlignment="Left" Margin="124,280,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" Height="29" FontSize="15"/>
+            <Label Content="Specialité" HorizontalAlignment="Left" Margin="33,277,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="15" Height="32" Width="88" Foreground="White"/>
+            <TextBox HorizontalAlignment="Left" Margin="123,318,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" Height="29" FontSize="15"/>
+            <Label Content="Groupe" HorizontalAlignment="Left" Margin="32,315,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="15" Height="32" Width="70" Foreground="White"/>
+            <TextBox HorizontalAlignment="Left" Margin="235,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="56" Height="30" FontSize="15" InputScope="Number"/>
+            <Button x:Name="mprogBack" Content="Retour" Margin="63,372,0,0" VerticalAlignment="Top" Height="27" FontWeight="Bold" HorizontalAlignment="Left" Width="82" >
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="progEdit" Content="Modifier" Margin="164,372,0,0" VerticalAlignment="Top" Height="27" FontWeight="Bold" HorizontalAlignment="Left" Width="88" RenderTransformOrigin="0.494,0.543" BorderBrush="#FF282D4B" Background="#FF282D4B" Foreground="White">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+
         </Grid>
     </Grid>
 </Page>

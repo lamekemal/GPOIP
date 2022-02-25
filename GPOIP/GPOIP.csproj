@@ -14,6 +14,7 @@
     <None Remove="Assets\etu.jpg" />
     <None Remove="Assets\etudiant.png" />
     <None Remove="Assets\femme.jpg" />
+    <None Remove="Assets\livre.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -27,6 +28,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Assets\femme.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\livre.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>

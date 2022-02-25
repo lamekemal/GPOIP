@@ -25,8 +25,8 @@ namespace GPOIP
 
         private void addButton_Click(object sender, RoutedEventArgs e)
         {
-            addFormsController addFormsControllerPage = new addFormsController();
-            this.Content = addFormsControllerPage;
+            HomeGrid.Visibility = Visibility.Hidden;
+            AddForm.Visibility = Visibility.Visible;
         }
     }
 }
