@@ -84,7 +84,7 @@
             <TextBox HorizontalAlignment="Left" Margin="524,232,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194" Height="36" AutomationProperties.HelpText="Amphi/Salle " Text="Amphi/Salle " FontSize="15" BorderBrush="White"/>
             <TextBox HorizontalAlignment="Left" Margin="524,308,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194" Height="36" AutomationProperties.HelpText="Equipements " Text="Equipements " FontSize="15" BorderBrush="White"/>
         </Grid>
-        <Grid>
+        <Grid x:Name="programationCours" Visibility="Hidden">
             <Grid.Background>
                 <ImageBrush ImageSource="/Assets/ecole.jpg" Stretch="UniformToFill"/>
             </Grid.Background>
@@ -116,6 +116,47 @@
                 </Button.Resources>
             </Button>
             <Button x:Name="progSave" Content="Valider" Margin="164,372,0,0" VerticalAlignment="Top" Height="27" FontWeight="Bold" HorizontalAlignment="Left" Width="88" Click="addButton_Click" RenderTransformOrigin="0.494,0.543" BorderBrush="#FF282D4B" Background="#FF282D4B" Foreground="White">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </Grid>
+        <Grid x:Name="suiviProg" Visibility="Hidden">
+            <Grid.Background>
+                <ImageBrush ImageSource="/Assets/ecole.jpg"/>
+            </Grid.Background>
+            <ListBox Margin="38,142,38,51"/>
+            <Rectangle HorizontalAlignment="Left" Height="44" Margin="-13,11,0,0" VerticalAlignment="Top" Width="279" Opacity="0.7" RadiusX="7" RadiusY="7" Fill="White">
+                <Rectangle.Effect>
+                    <BlurEffect/>
+                </Rectangle.Effect>
+            </Rectangle>
+            <TextBlock HorizontalAlignment="Left" Margin="13,19,0,0" Text="Suivi du programme" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" FontFamily="Franklin Gothic Book" Height="32" Width="253"/>
+            <Label Content="Faculte" HorizontalAlignment="Left" Margin="38,74,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="15" Height="32" Width="60"/>
+            <TextBox HorizontalAlignment="Left" Margin="38,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="127" Height="30" FontSize="15" InputScope="Default"/>
+            <Label Content="Amphi" HorizontalAlignment="Left" Margin="210,74,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="15" Height="32" Width="60"/>
+            <TextBox HorizontalAlignment="Left" Margin="210,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="127" Height="30" FontSize="15" InputScope="Default"/>
+            <Label Content="Date" HorizontalAlignment="Left" Margin="409,74,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="15" Height="32" Width="60"/>
+            <TextBox HorizontalAlignment="Left" Margin="409,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="127" Height="30" FontSize="15" InputScope="Date"/>
+            <Label Content="Specialite" HorizontalAlignment="Left" Margin="635,74,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="15" Height="32" Width="89"/>
+            <TextBox HorizontalAlignment="Left" Margin="635,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="127" Height="30" FontSize="15" InputScope="Default"/>
+            <Button x:Name="suiviExe" Content="Executer" Margin="381,406,0,0" VerticalAlignment="Top" Height="27" FontWeight="Bold" HorizontalAlignment="Left" Width="88" Click="addButton_Click" RenderTransformOrigin="0.494,0.543" BorderBrush="#FF282D4B" Background="#FF282D4B" Foreground="White">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="suiviExe_Copy" Content="Retour" Margin="152,406,0,0" VerticalAlignment="Top" Height="27" FontWeight="Bold" HorizontalAlignment="Left" Width="88" Click="addButton_Click" RenderTransformOrigin="0.494,0.543" BorderBrush="#FF282D4B" Background="#FF282D4B" Foreground="White">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="suiviExe_Copy1" Content="Non Executer" Margin="570,406,0,0" VerticalAlignment="Top" Height="27" FontWeight="Bold" HorizontalAlignment="Left" Width="88" Click="addButton_Click" RenderTransformOrigin="0.494,0.543" BorderBrush="#FF803120" Background="#FF803120" Foreground="White">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="10"/>
