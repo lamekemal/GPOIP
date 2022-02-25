@@ -27,21 +27,21 @@
         <TextBox HorizontalAlignment="Left" Margin="409,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="127" Height="30" FontSize="15" InputScope="Date"/>
         <Label Content="Specialite" HorizontalAlignment="Left" Margin="635,74,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="15" Height="32" Width="89"/>
         <TextBox HorizontalAlignment="Left" Margin="635,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="127" Height="30" FontSize="15" InputScope="Default"/>
-        <Button x:Name="suiviExe" Content="Executer" Margin="381,406,0,0" VerticalAlignment="Top" Height="27" FontWeight="Bold" HorizontalAlignment="Left" Width="88" Click="addButton_Click" RenderTransformOrigin="0.494,0.543" BorderBrush="#FF282D4B" Background="#FF282D4B" Foreground="White">
+        <Button x:Name="suiviExe" Content="Executer" Margin="381,406,0,0" VerticalAlignment="Top" Height="27" FontWeight="Bold" HorizontalAlignment="Left" Width="88" RenderTransformOrigin="0.494,0.543" BorderBrush="#FF282D4B" Background="#FF282D4B" Foreground="White">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="10"/>
                 </Style>
             </Button.Resources>
         </Button>
-        <Button x:Name="suiviExe_Copy" Content="Retour" Margin="152,406,0,0" VerticalAlignment="Top" Height="27" FontWeight="Bold" HorizontalAlignment="Left" Width="88" Click="addButton_Click" RenderTransformOrigin="0.494,0.543" BorderBrush="#FF282D4B" Background="#FF282D4B" Foreground="White">
+        <Button x:Name="suiviExe_Copy" Content="Retour" Margin="152,406,0,0" VerticalAlignment="Top" Height="27" FontWeight="Bold" HorizontalAlignment="Left" Width="88"  RenderTransformOrigin="0.494,0.543" BorderBrush="#FF282D4B" Background="#FF282D4B" Foreground="White">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="10"/>
                 </Style>
             </Button.Resources>
         </Button>
-        <Button x:Name="suiviExe_Copy1" Content="Non Executer" Margin="570,406,0,0" VerticalAlignment="Top" Height="27" FontWeight="Bold" HorizontalAlignment="Left" Width="88" Click="addButton_Click" RenderTransformOrigin="0.494,0.543" BorderBrush="#FF803120" Background="#FF803120" Foreground="White">
+        <Button x:Name="suiviExe_Copy1" Content="Non Executer" Margin="570,406,0,0" VerticalAlignment="Top" Height="27" FontWeight="Bold" HorizontalAlignment="Left" Width="88"  RenderTransformOrigin="0.494,0.543" BorderBrush="#FF803120" Background="#FF803120" Foreground="White">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="10"/>
