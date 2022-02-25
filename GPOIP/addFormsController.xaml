@@ -12,28 +12,14 @@
         <Grid.Background>
             <ImageBrush ImageSource="/Assets/etu.jpg" Stretch="UniformToFill"/>
         </Grid.Background>
-        <Button Content="Année Académique" Margin="0,56,40,0" VerticalAlignment="Top" Height="49" HorizontalAlignment="Right" Width="164" FontWeight="Bold" Background="#FFF3F0F0" BorderBrush="#FFE4DA0E">
+        <Button Content="Valider" Margin="0,395,23,0" VerticalAlignment="Top" Height="31" HorizontalAlignment="Right" Width="137" FontWeight="Bold" Background="#FF2281F1" BorderBrush="#FF0E79E4" Foreground="White">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="10"/>
                 </Style>
             </Button.Resources>
         </Button>
-        <Button Content="Faculté/Ecole" Margin="0,157,40,0" VerticalAlignment="Top" Height="49" HorizontalAlignment="Right" Width="164" FontWeight="Bold" Background="#FFF3F0F0" BorderBrush="#FFE4DA0E">
-            <Button.Resources>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="10"/>
-                </Style>
-            </Button.Resources>
-        </Button>
-        <Button Content="Equipements " Margin="0,363,40,0" VerticalAlignment="Top" Height="49" HorizontalAlignment="Right" Width="164" FontWeight="Bold" Background="#FFF3F0F0" BorderBrush="#FFE4DA0E">
-            <Button.Resources>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="10"/>
-                </Style>
-            </Button.Resources>
-        </Button>
-        <Button Content="Amphi/Salle " Margin="0,255,40,0" VerticalAlignment="Top" Height="49" HorizontalAlignment="Right" Width="164" FontWeight="Bold" Background="#FFF3F0F0" BorderBrush="#FFE4DA0E">
+        <Button Content="Annuler" Margin="0,395,178,0" VerticalAlignment="Top" Height="31" HorizontalAlignment="Right" Width="137" FontWeight="Bold" Background="#FFC50C0C" BorderBrush="#FFD64400" Foreground="White">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="10"/>
@@ -46,6 +32,10 @@
             </Rectangle.Effect>
         </Rectangle>
         <TextBlock HorizontalAlignment="Left" Margin="10,59,0,0" Text="Formulaire d'ajout" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="42" FontWeight="Bold" FontFamily="Franklin Gothic Book"/>
+        <TextBox HorizontalAlignment="Left" Margin="524,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194" Height="36" AutomationProperties.HelpText="Année Académique" Text="Année Académique" FontSize="15" BorderBrush="White"/>
+        <TextBox HorizontalAlignment="Left" Margin="524,159,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194" Height="36" AutomationProperties.HelpText="Faculté/Ecole" Text="Faculté/Ecole" FontSize="15" BorderBrush="White"/>
+        <TextBox HorizontalAlignment="Left" Margin="524,232,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194" Height="36" AutomationProperties.HelpText="Amphi/Salle " Text="Amphi/Salle " FontSize="15" BorderBrush="White"/>
+        <TextBox HorizontalAlignment="Left" Margin="524,308,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194" Height="36" AutomationProperties.HelpText="Equipements " Text="Equipements " FontSize="15" BorderBrush="White"/>
 
     </Grid>
 </Page>

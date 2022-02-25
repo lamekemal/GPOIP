@@ -30,5 +30,10 @@ namespace GPOIP
             home homePage = new home();
             this.Content = homePage;
         }
+
+        public void goToaddFormControllerPage()
+        {
+
+        }
     }
 }

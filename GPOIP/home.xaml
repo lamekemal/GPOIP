@@ -7,8 +7,8 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="home" Background="White">
-
     <Grid>
+        <Grid x:Name="HomeGrid">
         <Grid.Background>
             <ImageBrush ImageSource="/Assets/femme.jpg" Stretch="UniformToFill"/>
         </Grid.Background>
@@ -54,5 +54,74 @@
                 </Style>
             </Button.Resources>
         </Button>
+    </Grid>
+    <Grid x:Name="AddForm" Visibility="Hidden">
+        <Grid.Background>
+            <ImageBrush ImageSource="/Assets/etu.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Button Content="Valider" Margin="0,395,23,0" VerticalAlignment="Top" Height="31" HorizontalAlignment="Right" Width="137" FontWeight="Bold" Background="#FF2281F1" BorderBrush="#FF0E79E4" Foreground="White">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button Content="Annuler" Margin="0,395,178,0" VerticalAlignment="Top" Height="31" HorizontalAlignment="Right" Width="137" FontWeight="Bold" Background="#FFC50C0C" BorderBrush="#FFD64400" Foreground="White">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Rectangle HorizontalAlignment="Left" Height="98" Margin="-13,32,0,0" VerticalAlignment="Top" Width="371" Opacity="0.7" RadiusX="7" RadiusY="7" Fill="White">
+            <Rectangle.Effect>
+                <BlurEffect/>
+            </Rectangle.Effect>
+        </Rectangle>
+        <TextBlock HorizontalAlignment="Left" Margin="10,59,0,0" Text="Formulaire d'ajout" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="42" FontWeight="Bold" FontFamily="Franklin Gothic Book"/>
+        <TextBox HorizontalAlignment="Left" Margin="524,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194" Height="36" AutomationProperties.HelpText="Année Académique" Text="Année Académique" FontSize="15" BorderBrush="White"/>
+        <TextBox HorizontalAlignment="Left" Margin="524,159,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194" Height="36" AutomationProperties.HelpText="Faculté/Ecole" Text="Faculté/Ecole" FontSize="15" BorderBrush="White"/>
+        <TextBox HorizontalAlignment="Left" Margin="524,232,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194" Height="36" AutomationProperties.HelpText="Amphi/Salle " Text="Amphi/Salle " FontSize="15" BorderBrush="White"/>
+            <TextBox HorizontalAlignment="Left" Margin="524,308,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194" Height="36" AutomationProperties.HelpText="Equipements " Text="Equipements " FontSize="15" BorderBrush="White"/>
+        </Grid>
+        <Grid>
+            <Grid.Background>
+                <ImageBrush ImageSource="/Assets/ecole.jpg" Stretch="UniformToFill"/>
+            </Grid.Background>
+            <Rectangle HorizontalAlignment="Left" Height="98" Margin="-13,32,0,0" VerticalAlignment="Top" Width="371" Opacity="0.7" RadiusX="7" RadiusY="7" Fill="White">
+                <Rectangle.Effect>
+                    <BlurEffect/>
+                </Rectangle.Effect>
+            </Rectangle>
+            <TextBlock HorizontalAlignment="Left" Margin="10,59,0,0" Text="Formulaire d'ajout" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="42" FontWeight="Bold" FontFamily="Franklin Gothic Book"/>
+            <TextBlock HorizontalAlignment="Left" Height="307" Margin="423,104,0,0" Text="Recapitulatif" TextWrapping="Wrap" VerticalAlignment="Top" Width="340" Background="White"/>
+            <TextBox HorizontalAlignment="Left" Margin="89,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Height="27" FontSize="15" InputScope="Number"/>
+            <Label Content="Année" HorizontalAlignment="Left" Margin="9,153,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="15"/>
+            <TextBox HorizontalAlignment="Left" Margin="89,191,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Height="27" FontSize="15" InputScope="Date"/>
+            <Label Content="Date" HorizontalAlignment="Left" Margin="9,188,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="15"/>
+            <TextBox HorizontalAlignment="Left" Margin="90,226,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" Height="27" FontSize="15" InputScope="Number"/>
+            <Label Content="Heure" HorizontalAlignment="Left" Margin="10,223,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="15"/>
+            <TextBox HorizontalAlignment="Left" Margin="89,261,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Height="27" FontSize="15"/>
+            <Label Content="Amphi" HorizontalAlignment="Left" Margin="9,258,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="15"/>
+            <TextBox HorizontalAlignment="Left" Margin="90,296,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Height="27" FontSize="15"/>
+            <Label Content="Specialité" HorizontalAlignment="Left" Margin="10,293,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="15"/>
+            <TextBox HorizontalAlignment="Left" Margin="89,331,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Height="27" FontSize="15"/>
+            <Label Content="Groupe" HorizontalAlignment="Left" Margin="9,328,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="15"/>
+            <TextBox HorizontalAlignment="Left" Margin="188,224,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" Height="27" FontSize="15" InputScope="Number"/>
+            <Button x:Name="progBack" Content="Retour" Margin="63,372,0,0" VerticalAlignment="Top" Height="27" FontWeight="Bold" HorizontalAlignment="Left" Width="82" Click="addButton_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="progSave" Content="Valider" Margin="164,372,0,0" VerticalAlignment="Top" Height="27" FontWeight="Bold" HorizontalAlignment="Left" Width="88" Click="addButton_Click" RenderTransformOrigin="0.494,0.543" BorderBrush="#FF282D4B" Background="#FF282D4B" Foreground="White">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </Grid>
     </Grid>
 </Page>
