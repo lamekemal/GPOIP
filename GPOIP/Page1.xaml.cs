@@ -11,7 +11,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace GPOIP.pageDraft
+namespace GPOIP
 {
     /// <summary>
     /// Logique d'interaction pour Page1.xaml
@@ -21,6 +21,11 @@ namespace GPOIP.pageDraft
         public Page1()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

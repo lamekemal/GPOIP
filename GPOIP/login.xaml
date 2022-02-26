@@ -18,14 +18,14 @@
                 <ImageBrush ImageSource="/Assets/etudiant.png" Stretch="UniformToFill"/>
             </Grid.Background>
         </Grid>
-        <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="23,240,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="290" Height="44" FontSize="22" FontWeight="Normal" TextAlignment="Left">
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="23,240,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="290" Height="44" FontSize="22" FontWeight="Normal" TextAlignment="Left" Text="" AutomationProperties.Name="txtusername" TextChanged="TextBox_TextChanged">
             <TextBox.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="20"/>
                 </Style>
             </TextBox.Resources>
         </TextBox>
-        <PasswordBox Grid.Column="1" HorizontalAlignment="Left" Margin="23,319,0,0" MaxLength="25" PasswordChar="*"  VerticalAlignment="Top" Width="290" Height="45" FontSize="22" FontWeight="Normal" FontStyle="Italic">
+        <PasswordBox Grid.Column="1" HorizontalAlignment="Left" Margin="23,319,0,0" MaxLength="25" PasswordChar="*"  VerticalAlignment="Top" Width="290" Height="45" FontSize="22" FontWeight="Normal" FontStyle="Italic" AutomationProperties.Name="txtpassword">
             <PasswordBox.Style>
                 <Style TargetType="{x:Type PasswordBox}">
                     <Style.Resources>
@@ -65,15 +65,15 @@
                 </Style>
             </PasswordBox.Style>
         </PasswordBox>
-        <Button x:Name="loginButton" Content="Connexion" Grid.Column="1" HorizontalAlignment="Center" Margin="0,393,0,0" VerticalAlignment="Top" Height="50" Width="157" Background="#FF282D4D" FontWeight="Bold" FontSize="21" Foreground="White" Click="loginButton_Click">
+        <Button x:Name="loginButton" Content="Connexion" Grid.Column="1" HorizontalAlignment="Center" Margin="0,393,0,0" VerticalAlignment="Top" Height="50" Width="157" Background="#FF282D4D" FontWeight="Bold" FontSize="21" Foreground="White" Click="loginButton_Click" AutomationProperties.Name="btnConnexion">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="20"/>
                 </Style>
             </Button.Resources>
         </Button>
-        <Label Content="Utilisateur" Grid.Column="1" HorizontalAlignment="Left" Margin="38,210,0,0" FontSize="18" FontWeight="Normal" Height="30" VerticalAlignment="Top" Width="90"/>
-        <Label Content="Mot de passe" Grid.Column="1" HorizontalAlignment="Left" Margin="38,288,0,0" FontSize="18" FontWeight="Normal" Height="31" VerticalAlignment="Top" Width="131"/>
+        <Label Content="Utilisateur" Grid.Column="1" HorizontalAlignment="Left" Margin="38,210,0,0" FontSize="18" FontWeight="Normal" Height="30" VerticalAlignment="Top" Width="90" AutomationProperties.Name="username"/>
+        <Label Content="Mot de passe" Grid.Column="1" HorizontalAlignment="Left" Margin="38,288,0,0" FontSize="18" FontWeight="Normal" Height="31" VerticalAlignment="Top" Width="131" AutomationProperties.Name="password"/>
         <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="10,49,0,0" Text="Gestion et programation de l'occupation des infrastrutures pédagogiques " TextWrapping="Wrap" VerticalAlignment="Top" FontSize="21" FontWeight="Bold" Width="318" TextAlignment="Center" FontFamily="Century Gothic" Foreground="#FF282D4D" Height="99"/>
         <Label x:Name="closeButon" Content="Fermer    ." HorizontalAlignment="Right" VerticalAlignment="Top" FontWeight="Bold" Background="#FFEE1515" Foreground="White" Grid.Column="1" FontSize="8" Margin="0,-4,-9,0" MouseDown="closeButon_MouseDown">
             <Label.Resources>
